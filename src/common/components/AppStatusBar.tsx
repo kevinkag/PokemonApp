@@ -10,7 +10,7 @@ export const AppStatusBar: React.FC = () => {
   return (
     <StatusBar
       barStyle={isDarkTheme ? 'light-content' : 'dark-content'}
-      backgroundColor={colors.background}
+      backgroundColor={colors.surface}
     />
   );
 };

@@ -5,7 +5,7 @@ import { TextInput } from 'react-native-paper'
 export default function SearchInput({ ...props }) {
   return (
     <>
-      <TextInput style={styles.input} placeholder='Buscar pokemón...' {...props} />
+      <TextInput style={styles.input}  {...props} />
     </>
   )
 }
@@ -13,6 +13,6 @@ export default function SearchInput({ ...props }) {
 const styles = StyleSheet.create({
   input: {
     backgroundColor: 'transparent',
-    fontSize: 14
+    fontSize: 14,
   }
 })
