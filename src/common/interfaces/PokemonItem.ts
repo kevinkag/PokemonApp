@@ -32,8 +32,8 @@ export interface PokemonStat {
 export interface Pokemon {
   id: number;
   name: string;
-  height: number;
-  weight: number;
+  height: string;
+  weight: string;
   abilities: PokemonAbility[];
   types: PokemonType[];
   moves: PokemonMove[];

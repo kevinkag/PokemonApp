@@ -2,10 +2,10 @@ module.exports = {
   dependencies: {
     'react-native-vector-icons': {
       platforms: {
-        ios: null, // iOS ya tiene soporte automático
-        android: null, // Android ya tiene soporte automático
+        ios: null,
+        android: null,
       },
     },
   },
-  assets: ['./src/assets/icons'], // Ajusta esta ruta según tus necesidades
+  assets: ['./src/assets/icons'],
 };

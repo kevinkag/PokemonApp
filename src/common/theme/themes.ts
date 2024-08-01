@@ -4,13 +4,13 @@ import { DarkTheme as NavigationDarkTheme, DefaultTheme as NavigationDefaultThem
 export const CustomDarkTheme = {
   ...PaperDarkTheme,
   ...NavigationDarkTheme,
-  background: '#f0f',
   colors: {
     ...PaperDarkTheme.colors,
     ...NavigationDarkTheme.colors,
-    background: '#121212',
-    header: '',
+    header: '#121212',
     text: '#ffffff',
+    primary: '#7772FB'
+
   },
   barStyle: 'light-content'
 };
@@ -21,8 +21,9 @@ export const CustomLightTheme = {
   colors: {
     ...PaperDefaultTheme.colors,
     ...NavigationDefaultTheme.colors,
-    background: '#ffffff',
+    header: '#ffffff',
     text: '#000000',
+    primary: '#7772FB'
   },
   barStyle: 'dark-content'
 

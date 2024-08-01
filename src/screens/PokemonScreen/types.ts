@@ -3,12 +3,12 @@ import { RouteProp } from '@react-navigation/native';
 
 
 export type RootStackParamList = {
-  PokemonList: undefined;
+  PokemonScreen: any;
   PokemonDetail: { url: string };
 };
 
-export type PokemonListNavigationProp = StackNavigationProp<RootStackParamList, 'PokemonList'>;
-type PokemonListRouteProp = RouteProp<RootStackParamList, 'PokemonList'>;
+export type PokemonListNavigationProp = StackNavigationProp<RootStackParamList, 'PokemonScreen'>;
+type PokemonListRouteProp = RouteProp<RootStackParamList, 'PokemonScreen'>;
 
 export type Props = {
   navigation: PokemonListNavigationProp;

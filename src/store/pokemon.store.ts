@@ -1,12 +1,14 @@
 import { create } from 'zustand';
-import { Pokemon } from '../common/interfaces';
-import { fetchPokemon, fetchPokemonByUrl } from '../common/services/pokemon.service';
+import { Pokemon } from '../common/interfaces/PokemonResponse';
+import { fetchPokemon, fetchPokemonByUrl } from '../services/pokemon.service';
 
 interface PokemonStore {
   pokemonList: Pokemon[];
   pokemon: any;
   nextUrl: string;
   loading: boolean;
+  setResults: (results: any[]) => void;
+  clearResults: () => void;
   fetchPokemonList: () => Promise<void>;
   fetchPokemonByUrl: (url: string) => Promise<void>; // Actualizado aquí
 }
@@ -44,11 +46,16 @@ const usePokemonStore = create<PokemonStore>((set, get) => ({
         pokemon: data,
         loading: false,
       });
+      return
     } catch (error) {
       set({ loading: false });
       console.error(error);
     }
-  }
+  },
+  setResults: (pokemonList: any[]) => {
+    set({ pokemonList })
+  },
+  clearResults: () => set({ pokemonList: [] }),
 }));
 
 export default usePokemonStore;
